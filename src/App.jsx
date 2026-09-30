@@ -21,11 +21,18 @@ function Footer() {
   return <p>&copy; {year} Anastasia</p>
 }
 
+function GitHubLink() {
+  let url = "https://github.com/Anastasia-2102"
+  let label = "My GitHub"
+  return <a href={url}>{label}</a>
+}
+
 function App() {
   return (
     <div>
       <Header />
       <p>Learning to build websites with React.</p>
+      <GitHubLink />
       <Fortune />
       <Footer />
     </div>
