@@ -28,11 +28,25 @@ function GitHubLink() {
   return <a href={url}>{label}</a>
 }
 
+function ProjectCount() {
+  let projects = [
+    "Click Lab",
+    "Capstone",
+    "API Tutorial",
+    "Greeting Card Generator",
+    "Signup Page",
+    "Data Playlist"
+  ]
+
+  return <p>I have shipped {projects.length} projects so far.</p>
+}
+
 function App() {
   return (
     <div>
       <Header />
       <p>Learning to build websites with React.</p>
+      <ProjectCount />
       <About />
       <GitHubLink />
       <Fortune />
