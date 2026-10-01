@@ -17,6 +17,7 @@ A React site that shows the projects I built in Level 2.
 | `ClickLabCard` | Click Lab project, description, and two links | variables inside the component |
 | `CapstoneCard` | Capstone project, description, and two links | variables inside the component |
 | `DataPlaylistCard` | Data Playlist project, description, and two links | variables inside the component |
+| `GreetingCardGeneratorCard` | Greeting Card Generator project, description, and two links | variables inside the component |
 
 ## What I'm adding next
 

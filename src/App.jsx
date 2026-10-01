@@ -9,6 +9,7 @@ import ProjectCount from './ProjectCount.jsx'
 import CapstonePortfolioCard from './CapstonePortfolioCard.jsx'
 import ClickLabPortfolioCard from './ClickLabPortfolioCard.jsx'
 import DataPlaylistPortfolioCard from './DataPlaylistPortfolioCard.jsx'
+import GreetingCardGeneratorPortfolioCard from './GreetingCardGeneratorPortfolioCard.jsx'
 
 
 
@@ -23,9 +24,12 @@ function App() {
       <Skills />
       <GitHubLink />
       <Fortune />
-      <CapstonePortfolioCard />
-      <ClickLabPortfolioCard />
-      <DataPlaylistPortfolioCard />
+      <div className="grid">
+        <CapstonePortfolioCard />
+        <ClickLabPortfolioCard />
+        <DataPlaylistPortfolioCard />
+        <GreetingCardGeneratorPortfolioCard />
+      </div>
       <Footer />
     </div>
   )
