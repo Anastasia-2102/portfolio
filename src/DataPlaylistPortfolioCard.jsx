@@ -1,6 +1,6 @@
 function DataPlaylistPortfolioCard() {
   let name = "Data Playlist"
-  let description = "A playlist page that loads its songs from my own data API."
+  let description = "Songs from a chart, served by an API I deployed myself."
   let liveUrl = "https://anastasia-2102.github.io/data-playlist/"
   let repoUrl = "https://github.com/Anastasia-2102/data-playlist"
 

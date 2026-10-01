@@ -17,7 +17,7 @@ function App() {
     <div className="container">
       <Header />
       <Greeting />
-      <p>Learning to build websites with React.</p>
+      <p>I am learning React and building my first portfolio.</p>
       <ProjectCount />
       <About />
       <Skills />

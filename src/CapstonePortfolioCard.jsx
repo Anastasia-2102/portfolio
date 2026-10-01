@@ -1,6 +1,6 @@
 function CapstonePortfolioCard() {
   let name = "National Parks Capstone"
-  let description = "A family-friendly national parks site that helps families find a park everyone can enjoy."
+  let description = "A national parks website I built to help families find parks to visit."
   let liveUrl = "https://anastasia-2102.github.io/capstone/"
   let repoUrl = "https://github.com/Anastasia-2102/capstone"
 
