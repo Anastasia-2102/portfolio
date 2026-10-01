@@ -7,6 +7,8 @@ import Fortune from './Fortune.jsx'
 import GitHubLink from './GitHubLink.jsx'
 import ProjectCount from './ProjectCount.jsx'
 import CapstonePortfolioCard from './CapstonePortfolioCard.jsx'
+import ClickLabPortfolioCard from './ClickLabPortfolioCard.jsx'
+import DataPlaylistPortfolioCard from './DataPlaylistPortfolioCard.jsx'
 
 
 
@@ -22,6 +24,8 @@ function App() {
       <GitHubLink />
       <Fortune />
       <CapstonePortfolioCard />
+      <ClickLabPortfolioCard />
+      <DataPlaylistPortfolioCard />
       <Footer />
     </div>
   )
