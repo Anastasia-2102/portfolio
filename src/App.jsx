@@ -1,5 +1,6 @@
 import Header from './Header.jsx'
 import About from './About.jsx'
+import Skills from './Skills.jsx'
 
 function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min
@@ -48,6 +49,7 @@ function App() {
       <p>Learning to build websites with React.</p>
       <ProjectCount />
       <About />
+      <Skills />
       <GitHubLink />
       <Fortune />
       <Footer />
