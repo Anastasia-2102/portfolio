@@ -5,7 +5,7 @@ function DataPlaylistPortfolioCard() {
   let repoUrl = "https://github.com/Anastasia-2102/data-playlist"
 
   return (
-    <article>
+    <article className="card-azure">
       <h2>{name}</h2>
       <p>{description}</p>
       <p>

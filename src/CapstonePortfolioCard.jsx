@@ -5,7 +5,7 @@ function CapstonePortfolioCard() {
   let repoUrl = "https://github.com/Anastasia-2102/capstone"
 
   return (
-    <article>
+    <article className="card-jade">
       <h2>{name}</h2>
       <p>{description}</p>
       <p>

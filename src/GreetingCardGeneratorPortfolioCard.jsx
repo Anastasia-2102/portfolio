@@ -5,7 +5,7 @@ function GreetingCardGeneratorPortfolioCard() {
   let repoUrl = "https://github.com/Anastasia-2102/greeting-card-generator"
 
   return (
-    <article>
+    <article className="card-violet">
       <h2>{name}</h2>
       <p>{description}</p>
       <p>

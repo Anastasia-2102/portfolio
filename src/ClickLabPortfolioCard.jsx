@@ -5,7 +5,7 @@ function ClickLabPortfolioCard() {
   let repoUrl = "https://github.com/Anastasia-2102/click-lab"
 
   return (
-    <article>
+    <article className="card-pumpkin">
       <h2>{name}</h2>
       <p>{description}</p>
       <p>
