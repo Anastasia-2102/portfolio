@@ -6,12 +6,13 @@ import Footer from './Footer.jsx'
 import Fortune from './Fortune.jsx'
 import GitHubLink from './GitHubLink.jsx'
 import ProjectCount from './ProjectCount.jsx'
+import CapstonePortfolioCard from './CapstonePortfolioCard.jsx'
 
 
 
 function App() {
   return (
-    <div>
+    <div className="container">
       <Header />
       <Greeting />
       <p>Learning to build websites with React.</p>
@@ -20,6 +21,7 @@ function App() {
       <Skills />
       <GitHubLink />
       <Fortune />
+      <CapstonePortfolioCard />
       <Footer />
     </div>
   )
