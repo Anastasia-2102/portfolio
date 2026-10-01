@@ -1,16 +1,27 @@
-# React + Vite
+# My Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A React site that shows the projects I built in Level 2.
 
-Currently, two official plugins are available:
+## Components
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+| Component | What it shows | Where its values come from |
+| --- | --- | --- |
+| `Header` | my name and a line about me | typed into the JSX |
+| `About` | information about me | typed into the JSX |
+| `Skills` | my coding skills | typed into the JSX |
+| `Greeting` | a greeting that changes with the hour | `hour` and `greeting` variables |
+| `Fortune` | a random fortune | a list and `randomNumber` |
+| `Footer` | © and the current year | the year the page is opened |
+| `GitHubLink` | a link to my GitHub | `url` and `label` variables |
+| `ProjectCount` | the number of projects I have shipped | the `projects` list |
+| `ClickLabCard` | Click Lab project, description, and two links | variables inside the component |
+| `CapstoneCard` | Capstone project, description, and two links | variables inside the component |
+| `DataPlaylistCard` | Data Playlist project, description, and two links | variables inside the component |
 
-## React Compiler
+## What I'm adding next
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Add Pico CSS and portfolio project cards.
 
-## Expanding the Oxlint configuration
+## Built with
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+React, Vite, Bun, and Pico CSS.
