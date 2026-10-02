@@ -1,4 +1,5 @@
 import Header from './Header.jsx'
+import Hero from './Hero.jsx'
 import About from './About.jsx'
 import Skills from './Skills.jsx'
 import Greeting from './Greeting.jsx'
@@ -17,6 +18,7 @@ function App() {
   return (
     <div className="container">
       <Header />
+      <Hero />
       <Greeting />
       <p>I am learning React and building my first portfolio.</p>
       <ProjectCount />
