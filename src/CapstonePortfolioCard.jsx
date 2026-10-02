@@ -1,8 +1,8 @@
 function CapstonePortfolioCard() {
-  let name = "National Parks Capstone"
-  let description = "A national parks website I built to help families find parks to visit."
-  let liveUrl = "https://anastasia-2102.github.io/capstone/"
-  let repoUrl = "https://github.com/Anastasia-2102/capstone"
+  const name = "National Parks Capstone"
+  const description = "A national parks website I built to help families find parks to visit."
+  const liveUrl = "https://anastasia-2102.github.io/capstone/"
+  const repoUrl = "https://github.com/Anastasia-2102/capstone"
 
   return (
     <article className="card-jade">

@@ -1,8 +1,8 @@
 function ClickLabPortfolioCard() {
-  let name = "Click Lab"
-  let description = "An animal quiz game where you answer questions about animals."
-  let liveUrl = "https://anastasia-2102.github.io/click-lab/"
-  let repoUrl = "https://github.com/Anastasia-2102/click-lab"
+  const name = "Click Lab"
+  const description = "An animal quiz game where you answer questions about animals."
+  const liveUrl = "https://anastasia-2102.github.io/click-lab/"
+  const repoUrl = "https://github.com/Anastasia-2102/click-lab"
 
   return (
     <article className="card-pumpkin">

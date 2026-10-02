@@ -1,5 +1,7 @@
+import { captureOwnerStack } from "react"
+
 function Greeting() {
-  let hour = new Date().getHours()
+  const hour = new Date().getHours()
   let greeting = "Good evening"
 
   if (hour < 12) {

@@ -1,5 +1,5 @@
 function ProjectCount() {
-  let projects = [
+  const projects = [
     "Click Lab",
     "Capstone",
     "API Tutorial",
