@@ -12,12 +12,15 @@ import ClickLabPortfolioCard from './ClickLabPortfolioCard.jsx'
 import DataPlaylistPortfolioCard from './DataPlaylistPortfolioCard.jsx'
 import GreetingCardGeneratorPortfolioCard from './GreetingCardGeneratorPortfolioCard.jsx'
 import Gallery from "./Gallery.jsx"
-
+import Links from "./Links"
+import "./flex-container.css"
 
 function App() {
   return (
     <div className="container">
       <Header />
+      <p>Welcome to my Portfolio</p>
+      <Links />
       <Hero />
       <Greeting />
       <p>I am learning React and building my first portfolio.</p>
@@ -26,7 +29,7 @@ function App() {
       <Skills />
       <GitHubLink />
       <Fortune />
-      <div className="grid">
+      <div className="flex-container">
         <CapstonePortfolioCard />
         <ClickLabPortfolioCard />
         <DataPlaylistPortfolioCard />
