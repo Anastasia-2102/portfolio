@@ -1,5 +1,3 @@
-import { captureOwnerStack } from "react"
-
 function Greeting() {
   const hour = new Date().getHours()
   let greeting = "Good evening"
