@@ -1,0 +1,30 @@
+/* card-variations.css — other looks for a card. */
+/* This file is yours: add a variation, change a shade. */
+
+article.card-jade {
+  --pico-card-background-color: var(--pico-color-jade-50);
+  --pico-color: var(--pico-color-jade-850);
+  --pico-h2-color: var(--pico-color-jade-850);
+  --pico-primary: var(--pico-color-jade-650);
+}
+
+article.card-pumpkin {
+  --pico-card-background-color: var(--pico-color-pumpkin-50);
+  --pico-color: var(--pico-color-pumpkin-850);
+  --pico-h2-color: var(--pico-color-pumpkin-850);
+  --pico-primary: var(--pico-color-pumpkin-650);
+}
+
+article.card-azure {
+  --pico-card-background-color: var(--pico-color-azure-50);
+  --pico-color: var(--pico-color-azure-850);
+  --pico-h2-color: var(--pico-color-azure-850);
+  --pico-primary: var(--pico-color-azure-650);
+}
+
+article.card-violet {
+  --pico-card-background-color: var(--pico-color-violet-50);
+  --pico-color: var(--pico-color-violet-850);
+  --pico-h2-color: var(--pico-color-violet-850);
+  --pico-primary: var(--pico-color-violet-650);
+}
