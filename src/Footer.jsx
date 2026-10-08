@@ -5,7 +5,7 @@ function Footer() {
   const year = new Date().getFullYear()
   const github = "https://github.com/Anastasia-2102"
   const [, alt, thumb] = heroPhoto(
-  "https://images.unsplash.com/photo-1629317422263-9317e911014a", 300, 200, -20, 20, "MacBook Pro on a wooden table"
+  "1629317422263-9317e911014a", 300, 200, -20, 20, 0, "MacBook Pro on a wooden table"
 )
   return (
    <footer>
