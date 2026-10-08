@@ -11,6 +11,14 @@ function GreetingCardGeneratorPortfolioCard() {
   const addLike = () => {
     setLikes(likes + 1)
   }
+  const removeLike = () => {
+  if (likes > 0) {
+    setLikes(likes - 1)
+  }
+}
+  const resetLikes = () => {
+  setLikes(0)
+}
   return (
     <article className="card-violet">
       <h2>{name}</h2>
@@ -19,6 +27,8 @@ function GreetingCardGeneratorPortfolioCard() {
         <a href={liveUrl}>See it live</a> · <a href={repoUrl}>Read the code</a>
       </p>
       <button onClick={addLike}>Like {likes}</button>
+      <button onClick={removeLike}>Unlike</button>
+      <button onClick={resetLikes}>Reset</button>
     </article>
   )
 }

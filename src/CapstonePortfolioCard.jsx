@@ -12,6 +12,15 @@ function CapstonePortfolioCard() {
     setLikes(likes + 1)
   }
 
+  const removeLike = () => {
+  if (likes > 0) {
+    setLikes(likes - 1)
+  }
+}
+
+  const resetLikes = () => {
+  setLikes(0)
+}
   return (
     <article className="card-jade">
       <h2>{name}</h2>
@@ -20,6 +29,8 @@ function CapstonePortfolioCard() {
         <a href={liveUrl} role="button">See it live</a> 
         <a href={repoUrl} role="button" className="outline">Read the code</a>
         <button onClick={addLike}>Like {likes}</button>
+        <button onClick={removeLike}>Unlike</button>
+        <button onClick={resetLikes}>Reset</button>
       </p>
       
     </article>
