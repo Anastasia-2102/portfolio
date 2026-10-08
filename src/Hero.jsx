@@ -10,8 +10,8 @@ const photos = [
 
 const descriptions = [
   "MacBook Pro on a wooden table",
-  "Description of the second photo",
-  "Description of the third photo"
+  "Laptop and stationery on a desk",
+  "Laptop, notebooks, and colorful markers on a desk"
 ]
 
 function Hero() {
