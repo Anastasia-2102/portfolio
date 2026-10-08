@@ -6,10 +6,14 @@ function DataPlaylistPortfolioCard() {
   const liveUrl = "https://anastasia-2102.github.io/data-playlist/"
   const repoUrl = "https://github.com/Anastasia-2102/data-playlist"
 
-  const [likes, setLikes] = useState(0)
+  const [likes, setLikes] = useState(
+    Number(localStorage.getItem ("data-playlist-likes"))
+  )
 
   const addLike = () => {
-    setLikes(likes + 1)
+  const next = likes + 1
+  setLikes (next)
+  localStorage.setItem ("data-playlist-likes", next)
   }
   const removeLike = () => {
   if (likes > 0) {

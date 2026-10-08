@@ -6,10 +6,13 @@ function ClickLabPortfolioCard() {
   const liveUrl = "https://anastasia-2102.github.io/click-lab/"
   const repoUrl = "https://github.com/Anastasia-2102/click-lab"
 
-  const [likes, setLikes] = useState(0)
-
+  const [likes, setLikes] = useState(
+     Number(localStorage.getItem("click-lab-likes"))
+  )
   const addLike = () => {
-    setLikes(likes + 1)
+  const next = likes + 1
+  setLikes(next)
+  localStorage.setItem("click-lab-likes", next)
   }
 
   const removeLike = () => {
