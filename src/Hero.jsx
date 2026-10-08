@@ -17,7 +17,7 @@ function Hero() {
       <img src={src} alt={alt} />
       <h2>Learning, building, and growing every day.</h2>
     </div>
-    <p>
+    <p className="hero-buttons">
       <button onClick={showColor}>Color</button>
       <button onClick={showBlackAndWhite}>Black and White</button>
     </p>

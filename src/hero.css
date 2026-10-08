@@ -4,6 +4,13 @@
   position: relative;
 }
 
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-radius: 8px;
+}
+
 .hero img {
   display: block;
   width: 100%;
