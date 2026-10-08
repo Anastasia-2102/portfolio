@@ -8,6 +8,12 @@ const photos = [
   "photo-1668605335560-b0786d21fd85"
 ]
 
+const descriptions = [
+  "MacBook Pro on a wooden table",
+  "Description of the second photo",
+  "Description of the third photo"
+]
+
 function Hero() {
   const [sat, setSat] = useState(0)
   const [index, setIndex] = useState(0)
@@ -31,7 +37,7 @@ function Hero() {
     setIndex(index - 1)
   }
  }
-  const [src, alt, thumb] = heroPhoto(photos[index], 300, 200, -20, 20, sat, "MacBook Pro on a wooden table")
+  const [src, alt, thumb] = heroPhoto(photos[index], 300, 200, -20, 20, sat, descriptions[index])
   return (
   <div>
     <div className="hero">
