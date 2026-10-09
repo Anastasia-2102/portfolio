@@ -29,10 +29,6 @@ function CapstonePortfolioCard() {
   const resetLikes = () => {
   setLikes(0)
 }
-  let text = description
-if (open) {
-  text = description + " " + details
-}
 
 let label = "Show More"
 if (open) {
