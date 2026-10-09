@@ -14,7 +14,7 @@
 | `DataPlaylistCard` | Data Playlist project, description, and two links | variables inside the component | its likes, and whether it shows more |
 | `GreetingCardGeneratorCard` | Greeting Card Generator project, description, and two links | variables inside the component | its likes, and whether it shows more |
 
-## What I'm adding next
+## What I added
 
 - Color and Black and White buttons on my hero
 - More Blur and No Blur buttons on my hero
