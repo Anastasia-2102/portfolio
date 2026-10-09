@@ -46,12 +46,13 @@ function Hero() {
   }
  }
   const [src, alt, thumb] = heroPhoto(photos[index], 300, 200, -20, 20, sat, descriptions[index])
+  const caption = "Photo " + (index + 1) + " of " + photos.length + ": " + descriptions[index]
   return (
   <div>
     <div className="hero">
       
       <img src={src + "&blur=" + blur} alt={alt} />
-      <p>Photo {index + 1} of {photos.length}</p>
+      <p>{caption}</p>
       <h2>Learning, building, and growing every day.</h2>
     </div>
     <p className="hero-buttons">
