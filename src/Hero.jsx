@@ -42,6 +42,7 @@ function Hero() {
   <div>
     <div className="hero">
       <img src={src} alt={alt} />
+      <p>Photo {index + 1} of {photos.length}</p>
       <h2>Learning, building, and growing every day.</h2>
     </div>
     <p className="hero-buttons">
