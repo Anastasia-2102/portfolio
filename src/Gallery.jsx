@@ -1,8 +1,8 @@
 import imageUrl from "./image-url.js"
 
-const photo1 = "https://images.unsplash.com/photo-1570993492881-25240ce854f4"
-const photo2 = "https://images.unsplash.com/photo-1555099962-4199c345e5dd"
-const photo3 = "https://images.unsplash.com/photo-1621348016212-535c972093db"
+const photo1 = "photo-1570993492881-25240ce854f4"
+const photo2 = "photo-1555099962-4199c345e5dd"
+const photo3 = "photo-1621348016212-535c972093db"
 
 function Gallery() {
   return (
