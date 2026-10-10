@@ -19,6 +19,13 @@ function Hero() {
   const [sat, setSat] = useState(0)
   const [index, setIndex] = useState(0)
   const [blur, setBlur] = useState(0)
+
+  const [note, setNote] = useState("")
+
+  const readNote = (event) => {
+  setNote(event.target.value)
+  }
+
   const showColor = () => {
     setSat(0)
   }
@@ -63,6 +70,8 @@ function Hero() {
       <button onClick={previousPhoto}>Previous</button>
       <button onClick={nextPhoto}>Next</button>
     </p>
+    <input onChange={readNote} />
+    <p>{note}</p>
   </div>
 )
 }
