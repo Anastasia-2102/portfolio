@@ -17,6 +17,7 @@ const descriptions = [
 
 function Hero() {
   const [sat, setSat] = useState(0)
+  const [sepia, setSepia] = useState(0)
   const [index, setIndex] = useState(0)
   const [blur, setBlur] = useState(0)
 
@@ -25,7 +26,9 @@ function Hero() {
   const readNote = (event) => {
   setNote(event.target.value)
   }
-
+  const readSepia = (event) => {
+  setSepia(Number(event.target.value))
+  }
   const showColor = () => {
     setSat(0)
   }
@@ -52,7 +55,7 @@ function Hero() {
     setIndex(index - 1)
   }
  }
-  const [src, alt, thumb] = heroPhoto(photos[index], 300, 200, -20, 20, sat, descriptions[index])
+  const [src, alt, thumb] = heroPhoto(photos[index], 300, 200, -20, sepia, sat, descriptions[index])
   const caption = "Photo " + (index + 1) + " of " + photos.length + ": " + descriptions[index]
   return (
   <div>
@@ -70,6 +73,8 @@ function Hero() {
       <button onClick={previousPhoto}>Previous</button>
       <button onClick={nextPhoto}>Next</button>
     </p>
+    <input type="range" min="0" max="100" step="10" value={sepia} onChange={readSepia} />
+    <p>Sepia: {sepia}</p>
     <input onChange={readNote} />
     <p>{note}</p>
   </div>
