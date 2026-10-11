@@ -4,9 +4,9 @@ import './footer.css'
 function Footer() {
   const year = new Date().getFullYear()
   const github = "https://github.com/Anastasia-2102"
-  const [, alt, thumb] = heroPhoto(
-  "photo-1629317422263-9317e911014a", 300, 200, -20, 20, 0, "MacBook Pro on a wooden table"
-)
+  const [, alt, thumb] = heroPhoto({
+  photo: "photo-1629317422263-9317e911014a", width: 300, height: 200, brightness: -20, sepia: 20, sat: 0, description: "MacBook Pro on a wooden table"
+})
   return (
    <footer>
      <p>&copy; {year} Anastasia</p>

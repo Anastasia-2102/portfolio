@@ -55,7 +55,7 @@ function Hero() {
     setIndex(index - 1)
   }
  }
-  const [src, alt, thumb] = heroPhoto(photos[index], 300, 200, -20, sepia, sat, descriptions[index])
+  const [src, alt, thumb] = heroPhoto({ photo: photos[index], width: 300, height: 200, brightness: -20, sepia, sat, description: descriptions[index] })
   const caption = "Photo " + (index + 1) + " of " + photos.length + ": " + descriptions[index]
   return (
   <div>
