@@ -37,7 +37,7 @@ function ImageBuilder() {
     setSepia(0)
     setBlur(0)
   }
-  const address = builderUrl(photo, sat, sepia, blur)
+  const address = builderUrl({photo, sat, sepia, blur})
   return (
     <section>
       <h2>Image Builder</h2>
