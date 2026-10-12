@@ -4,40 +4,40 @@ import builderUrl from './builder-url.js'
 function ImageBuilder() {
   const photo = "photo-1642425146609-6c8ff4589d18"
 
-  const [sat, setSat] = useState(0)
-  const [sepia, setSepia] = useState(0)
-  const [blur, setBlur] = useState(0)
+  const [settings, setSettings] = useState({
+  sat: 0, sepia: 0, blur: 0
+})
 
   const showColor = () => {
-    setSat(0)
-  }
+  setSettings({ ...settings, sat: 0 })
+}
 
-  const showBlackAndWhite = () => {
-    setSat(-100)
-  }
+const showBlackAndWhite = () => {
+  setSettings({ ...settings, sat: -100 })
+}
 
-  const noSepia = () => {
-    setSepia(0)
-  }
+const noSepia = () => {
+  setSettings({ ...settings, sepia: 0 })
+}
 
-  const showSepia = () => {
-    setSepia(80)
-  }
+const showSepia = () => {
+  setSettings({ ...settings, sepia: 80 })
+}
 
-  const showSharp = () => {
-    setBlur(0)
-  }
+const showSharp = () => {
+  setSettings({ ...settings, blur: 0 })
+}
 
-  const showBlurred = () => {
-    setBlur(100)
-  }
+const showBlurred = () => {
+  setSettings({ ...settings, blur: 100 })
+}
 
   const reset = () => {
-    setSat(0)
-    setSepia(0)
-    setBlur(0)
-  }
-  const address = builderUrl({photo, sat, sepia, blur})
+  setSettings({ sat: 0, sepia: 0, blur: 0 })
+}
+  const address = builderUrl({
+  photo, sat: settings.sat, sepia: settings.sepia, blur: settings.blur
+})
   return (
     <section>
       <h2>Image Builder</h2>
