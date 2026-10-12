@@ -16,9 +16,10 @@ const descriptions = [
 ]
 
 function Hero() {
-  const [sat, setSat] = useState(0)
-  const [sepia, setSepia] = useState(0)
-  const [index, setIndex] = useState(0)
+  const [settings, setSettings] = useState({
+  index: 0, sat: 0, sepia: 0
+})
+
   const [blur, setBlur] = useState(0)
 
   const [note, setNote] = useState("")
@@ -26,37 +27,52 @@ function Hero() {
   const readNote = (event) => {
   setNote(event.target.value)
   }
+
   const readSepia = (event) => {
-  setSepia(Number(event.target.value))
+    setSettings({ ...settings, sepia: Number(event.target.value) })
   }
+
   const showColor = () => {
-    setSat(0)
+    setSettings({ ...settings, sat: 0 })
   }
+
   const showBlackAndWhite = () => {
-    setSat(-100)
+    setSettings({ ...settings, sat: -100 })
   }
   const moreBlur = () => {
-  setBlur(blur + 100)
+    setBlur(blur + 100)
   }
+
   const removeBlur = () => {
-  setBlur(0)
+    setBlur(0)
   }
+
   const nextPhoto = () => {
-  if (index === photos.length - 1) {
-    setIndex(0)
-  } else {
-    setIndex(index + 1)
+    if (settings.index === photos.length - 1) {
+      setSettings({ ...settings, index: 0 })
+    } else {
+      setSettings({ ...settings, index: settings.index + 1 })
+    }
   }
- }
+
   const previousPhoto = () => {
-  if (index === 0) {
-    setIndex(photos.length - 1)
-  } else {
-    setIndex(index - 1)
+    if (settings.index === 0) {
+      setSettings({ ...settings, index: photos.length - 1 })
+    } else {
+      setSettings({ ...settings, index: settings.index - 1 })
+    }
   }
- }
-  const {src, alt, thumb} = heroPhoto({ photo: photos[index], width: 300, height: 200, brightness: -20, sepia, sat, description: descriptions[index] })
-  const caption = "Photo " + (index + 1) + " of " + photos.length + ": " + descriptions[index]
+  const { src, alt, thumb } = heroPhoto({
+  photo: photos[settings.index],
+  width: 300,
+  height: 200,
+  brightness: -20,
+  sepia: settings.sepia,
+  sat: settings.sat,
+  description: descriptions[settings.index]
+})
+
+const caption = "Photo " + (settings.index + 1) + " of " + photos.length + ": " + descriptions[settings.index]
   return (
   <div>
     <div className="hero">
@@ -73,8 +89,8 @@ function Hero() {
       <button onClick={previousPhoto}>Previous</button>
       <button onClick={nextPhoto}>Next</button>
     </p>
-    <input type="range" min="0" max="100" step="10" value={sepia} onChange={readSepia} />
-    <p>Sepia: {sepia}</p>
+    <input type="range" min="0" max="100" step="10" value={settings.sepia} onChange={readSepia} />
+    <p>Sepia: {settings.sepia}</p>
     <input onChange={readNote} />
     <p>{note}</p>
   </div>
