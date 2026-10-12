@@ -12,6 +12,7 @@ import ClickLabPortfolioCard from './ClickLabPortfolioCard.jsx'
 import DataPlaylistPortfolioCard from './DataPlaylistPortfolioCard.jsx'
 import GreetingCardGeneratorPortfolioCard from './GreetingCardGeneratorPortfolioCard.jsx'
 import Gallery from "./Gallery.jsx"
+import ImageBuilder from './ImageBuilder.jsx'
 import Links from "./Links"
 import "./flex-container.css"
 
@@ -36,6 +37,7 @@ function App() {
         <GreetingCardGeneratorPortfolioCard />
       </div>
       <Gallery />
+      <ImageBuilder />
       <Footer />
     </div>
   )

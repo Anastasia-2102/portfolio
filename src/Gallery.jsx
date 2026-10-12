@@ -7,9 +7,18 @@ const photo3 = "photo-1621348016212-535c972093db"
 function Gallery() {
   return (
     <div className="grid">
-      <img src={imageUrl(photo1, 400, 250, 0)} alt="Workspace" />
-      <img src={imageUrl(photo2, 400, 250, 0)} alt="Coding" />
-      <img src={imageUrl(photo3, 400, 250, 0)} alt="Creative workspace" />
+      <img
+  src={imageUrl({ photo: photo1, width: 400, height: 250, brightness: 0, sepia: 0 })}
+  alt="Workspace" 
+      />
+      <img
+  src={imageUrl({ photo: photo2, width: 400, height: 250, brightness: 0, sepia: 0 })}
+  alt="Coding"
+      />
+      <img
+  src={imageUrl({ photo: photo3, width: 400, height: 250, brightness: 0, sepia: 0 })}
+  alt="Creative workspace"
+      />
     </div>
   )
 }

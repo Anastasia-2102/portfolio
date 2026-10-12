@@ -1,12 +1,13 @@
 import { useState } from 'react'
 
 function DataPlaylistPortfolioCard() {
-  const name = "Data Playlist"
-  const description = "Songs from a chart, served by an API I deployed myself."
-  const details = "I built this project to practice working with an API and displaying song data."
-  const liveUrl = "https://anastasia-2102.github.io/data-playlist/"
-  const repoUrl = "https://github.com/Anastasia-2102/data-playlist"
-
+  const project = {
+  name: "Data Playlist",
+  description: "Songs from a chart, served by an API I deployed myself.",
+  details: "I built this project to practice working with an API and displaying song data.",
+  liveUrl: "https://anastasia-2102.github.io/data-playlist/",
+  repoUrl: "https://github.com/Anastasia-2102/data-playlist",
+  }
   const [likes, setLikes] = useState(
     Number(localStorage.getItem ("data-playlist-likes"))
  )
@@ -34,12 +35,12 @@ function DataPlaylistPortfolioCard() {
  }
   return (
     <article className="card-azure">
-      <h2>{name}</h2>
-      <p>{description}</p>
-      {open && <p>{details}</p>}
+      <h2>{project.name}</h2>
+      <p>{project.description}</p>
+      {open && <p>{project.details}</p>}
       <button onClick={toggleOpen}>{label}</button>
       <p>
-        <a href={liveUrl}>See it live</a> · <a href={repoUrl}>Read the code</a>
+        <a href={project.liveUrl}>See it live</a> · <a href={project.repoUrl}>Read the code</a>
       </p>
       <button onClick={addLike}>Like {likes}</button>
       <button onClick={removeLike}>Unlike</button>
