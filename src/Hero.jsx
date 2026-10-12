@@ -4,15 +4,9 @@ import './hero.css'
 
 
 const photos = [
-  "photo-1629317422263-9317e911014a",
-  "photo-1631557777232-a2632ae3c67d",
-  "photo-1668605335560-b0786d21fd85"
-]
-
-const descriptions = [
-  "MacBook Pro on a wooden table",
-  "Laptop and stationery on a desk",
-  "Laptop, notebooks, and colorful markers on a desk"
+  { id: "photo-1629317422263-9317e911014a", description: "MacBook Pro on a wooden table" },
+  { id: "photo-1631557777232-a2632ae3c67d", description: "Laptop and stationery on a desk" },
+  { id: "photo-1668605335560-b0786d21fd85", description: "Laptop, notebooks, and colorful markers on a desk" }
 ]
 
 function Hero() {
@@ -62,17 +56,18 @@ function Hero() {
       setSettings({ ...settings, index: settings.index - 1 })
     }
   }
+  const { id, description } = photos[settings.index]
   const { src, alt, thumb } = heroPhoto({
-  photo: photos[settings.index],
+  photo: id,
   width: 300,
   height: 200,
   brightness: -20,
   sepia: settings.sepia,
   sat: settings.sat,
-  description: descriptions[settings.index]
+  description: description
 })
 
-const caption = "Photo " + (settings.index + 1) + " of " + photos.length + ": " + descriptions[settings.index]
+const caption = "Photo " + (settings.index + 1) + " of " + photos.length + ": " + description
   return (
   <div>
     <div className="hero">
