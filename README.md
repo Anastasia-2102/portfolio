@@ -9,10 +9,10 @@
 | `Footer` | © and the current year | the year the page is opened | — |
 | `GitHubLink` | a link to my GitHub | `url` and `label` variables | — |
 | `ProjectCount` | the number of projects I have shipped | the `projects` list | — |
-| `ClickLabCard` | Click Lab project, description, and two links | variables inside the component | its likes, and whether it shows more |
-| `CapstoneCard` | Capstone project, description, and two links | variables inside the component | its likes, and whether it shows more |
-| `DataPlaylistCard` | Data Playlist project, description, and two links | variables inside the component | its likes, and whether it shows more |
-| `GreetingCardGeneratorCard` | Greeting Card Generator project, description, and two links | variables inside the component | its likes, and whether it shows more |
+| `ClickLabCard` | Click Lab project, description, and two links | the project object | its likes, and whether it shows more |
+| `CapstoneCard` | Capstone project, description, and two links | the project object | its likes, and whether it shows more |
+| `DataPlaylistCard` | Data Playlist project, description, and two links | the project object | its likes, and whether it shows more |
+| `GreetingCardGeneratorCard` | Greeting Card Generator project, description, and two links | the project object | its likes, and whether it shows more |
 
 ## What I added
 
