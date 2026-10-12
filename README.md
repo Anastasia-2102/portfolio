@@ -1,7 +1,7 @@
 | Component | What it shows | Where its values come from | What it remembers |
 | --- | --- | --- | --- |
 | `Header` | my name and a line about me | typed into the JSX | — |
-| `Hero` | my hero photos | `heroPhoto`, which calls `imageUrl` | which photo is showing, whether it is in color, and the blur level |
+| `Hero` | my hero photos | heroPhoto, which calls imageUrl | which photo is showing, color, sepia, and blur settings |
 | `About` | information about me | typed into the JSX | — |
 | `Skills` | my coding skills | typed into the JSX | — |
 | `Greeting` | a greeting that changes with the hour | `hour` and `greeting` variables | — |
