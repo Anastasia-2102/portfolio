@@ -1,12 +1,13 @@
 import { useState } from 'react'
 
 function CapstonePortfolioCard() {
-  const name = "National Parks Capstone"
-  const description = "A national parks website I built to help families find parks to visit."
-  const details = "I built it in Level 2 to practice working with an API and displaying national park information."
-  const liveUrl = "https://anastasia-2102.github.io/capstone/"
-  const repoUrl = "https://github.com/Anastasia-2102/capstone"
-
+  const project = {
+  name: "National Parks Capstone",
+  description: "A national parks website I built to help families find parks to visit.",
+  details: "I built it in Level 2 to practice working with an API and displaying national park information.",
+  liveUrl: "https://anastasia-2102.github.io/capstone/",
+  repoUrl: "https://github.com/Anastasia-2102/capstone",
+  }
   const [likes, setLikes] = useState(
    Number(localStorage.getItem("capstone-likes"))
   )
@@ -36,13 +37,13 @@ if (open) {
 }
   return (
     <article className="card-jade">
-      <h2>{name}</h2>
-      <p>{description}</p>
-      {open && <p>{details}</p>}
+      <h2>{project.name}</h2>
+      <p>{project.description}</p>
+      {open && <p>{project.details}</p>}
       <button onClick={toggleOpen}>{label}</button>
       <p className="card-buttons">
-        <a href={liveUrl} role="button">See it live</a> 
-        <a href={repoUrl} role="button" className="outline">Read the code</a>
+        <a href={project.liveUrl} role="button">See it live</a> 
+        <a href={project.repoUrl} role="button" className="outline">Read the code</a>
         <button onClick={addLike}>Like {likes}</button>
         <button onClick={removeLike}>Unlike</button>
         <button onClick={resetLikes}>Reset</button>

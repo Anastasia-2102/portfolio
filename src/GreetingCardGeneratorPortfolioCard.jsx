@@ -1,12 +1,13 @@
 import { useState } from 'react'
 
 function GreetingCardGeneratorPortfolioCard() {
-  const name = "Greeting Card Generator"
-  const description = "A project where I practiced building a greeting card generator."
-  const details = "I built this project using HTML and JavaScript to generate greeting cards with random messages and a surprise after five cards."
-  const liveUrl = "https://anastasia-2102.github.io/greeting-card-generator/"
-  const repoUrl = "https://github.com/Anastasia-2102/greeting-card-generator"
-
+  const project = {
+  name: "Greeting Card Generator",
+  description: "A project where I practiced building a greeting card generator.",
+  details: "I built this project using HTML and JavaScript to generate greeting cards with random messages and a surprise after five cards.",
+  liveUrl: "https://anastasia-2102.github.io/greeting-card-generator/",
+  repoUrl: "https://github.com/Anastasia-2102/greeting-card-generator",
+  }
   const [likes, setLikes] = useState(0)
   const [open, setOpen] = useState(false)
   const addLike = () => {
@@ -30,12 +31,12 @@ function GreetingCardGeneratorPortfolioCard() {
  }
   return (
     <article className="card-violet">
-      <h2>{name}</h2>
-      <p>{description}</p>
-      {open && <p>{details}</p>}
+      <h2>{project.name}</h2>
+      <p>{project.description}</p>
+      {open && <p>{project.details}</p>}
       <button onClick={toggleOpen}>{label}</button>
       <p>
-        <a href={liveUrl}>See it live</a> · <a href={repoUrl}>Read the code</a>
+        <a href={project.liveUrl}>See it live</a> · <a href={project.repoUrl}>Read the code</a>
       </p>
       <button onClick={addLike}>Like {likes}</button>
       <button onClick={removeLike}>Unlike</button>
