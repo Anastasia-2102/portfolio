@@ -31,15 +31,17 @@ function CapstonePortfolioCard() {
   setLikes(0)
 }
 
+let text = project.description
 let label = "Show More"
 if (open) {
+  text = project.description + " " + project.details
   label = "Show Less"
 }
+
   return (
     <article className="card-jade">
       <h2>{project.name}</h2>
-      <p>{project.description}</p>
-      {open && <p>{project.details}</p>}
+      <p>{text}</p>
       <button onClick={toggleOpen}>{label}</button>
       <p className="card-buttons">
         <a href={project.liveUrl} role="button">See it live</a> 
