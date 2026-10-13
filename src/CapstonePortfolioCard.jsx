@@ -1,13 +1,8 @@
 import { useState } from 'react'
+import projects from './projects.js'
 
 function CapstonePortfolioCard() {
-  const project = {
-  name: "National Parks Capstone",
-  description: "A national parks website I built to help families find parks to visit.",
-  details: "I built it in Level 2 to practice working with an API and displaying national park information.",
-  liveUrl: "https://anastasia-2102.github.io/capstone/",
-  repoUrl: "https://github.com/Anastasia-2102/capstone",
-  }
+  const project = projects[0]
   const [likes, setLikes] = useState(
    Number(localStorage.getItem("capstone-likes"))
   )

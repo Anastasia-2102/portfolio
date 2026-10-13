@@ -1,13 +1,8 @@
 import { useState } from 'react'
+import projects from './projects.js'
 
 function DataPlaylistPortfolioCard() {
-  const project = {
-  name: "Data Playlist",
-  description: "Songs from a chart, served by an API I deployed myself.",
-  details: "I built this project to practice working with an API and displaying song data.",
-  liveUrl: "https://anastasia-2102.github.io/data-playlist/",
-  repoUrl: "https://github.com/Anastasia-2102/data-playlist",
-  }
+  const project = projects[2]
   const [likes, setLikes] = useState(
     Number(localStorage.getItem ("data-playlist-likes"))
  )

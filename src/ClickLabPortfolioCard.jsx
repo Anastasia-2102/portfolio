@@ -1,13 +1,8 @@
 import { useState } from 'react'
+import projects from './projects.js'
 
 function ClickLabPortfolioCard() {
-  const project = {
-  name: "Click Lab",
-  description: "An animal quiz game where you answer questions about animals.",
-  details: "I built this project to practice JavaScript, event handling, and interactive game features.",
-  liveUrl: "https://anastasia-2102.github.io/click-lab/",
-  repoUrl: "https://github.com/Anastasia-2102/click-lab",
-  }
+  const project = projects[1]
   const [likes, setLikes] = useState(
      Number(localStorage.getItem("click-lab-likes"))
   )
