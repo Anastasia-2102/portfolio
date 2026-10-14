@@ -13,7 +13,58 @@
 
 .card-buttons {
   display: flex;
-  gap: 0.75rem;
-  justify-content: center;
+  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.like-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+
+.small-button {
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.project-link {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+}
+
+.description-control {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.intro {
+  text-align: center;
+}
+
+.intro h2,
+.intro ul {
+  text-align: left;
+}
+
+section button {
+  margin: 5px;
+}
+
+section {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.fortune {
+  margin-bottom: 2rem;
+}
+
+body {
+  background-color: #fff7fa;
 }

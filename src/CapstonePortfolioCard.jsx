@@ -37,14 +37,18 @@ if (open) {
     <article className="card-jade">
       <h2>{project.name}</h2>
       <p>{text}</p>
+      <div className="description-control">
       <button onClick={toggleOpen}>{label}</button>
-      <p className="card-buttons">
-        <a href={project.liveUrl} role="button">See it live</a> 
-        <a href={project.repoUrl} role="button" className="outline">Read the code</a>
-        <button onClick={addLike}>Like {likes}</button>
-        <button onClick={removeLike}>Unlike</button>
-        <button onClick={resetLikes}>Reset</button>
-      </p>
+      </div>
+      <div className="card-buttons">
+        <a className="project-link" href={project.liveUrl} role="button">See it live</a> 
+        <a className="project-link outline" href={project.repoUrl} role="button">Read the code</a>
+        <div className="like-controls">
+          <button className="small-button" onClick={addLike}>Like {likes}</button>
+          <button className="small-button" onClick={removeLike}>Unlike</button>
+          <button className="small-button" onClick={resetLikes}>Reset</button>
+        </div>
+      </div>
       
     </article>
   )

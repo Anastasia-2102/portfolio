@@ -19,17 +19,20 @@ import "./flex-container.css"
 function App() {
   return (
     <div className="container">
-      <Header />
-      <p>Welcome to my Portfolio</p>
-      <Links />
-      <Hero />
-      <Greeting />
-      <p>I am learning React and building my first portfolio.</p>
-      <ProjectCount />
-      <About />
-      <Skills />
-      <GitHubLink />
-      <Fortune />
+      <div className="intro">
+        <Header />
+        <p>Welcome to my Portfolio</p>
+        <Links />
+        <Hero />
+      </div>
+        <Greeting />
+        <p>I am learning React and building my first portfolio.</p>
+        <ProjectCount />
+        <About />
+        <Skills />
+        <GitHubLink />
+        <Fortune />
+      
       <div className="flex-container">
         <CapstonePortfolioCard />
         <ClickLabPortfolioCard />

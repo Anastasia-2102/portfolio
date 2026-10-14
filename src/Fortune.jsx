@@ -14,7 +14,7 @@ function Fortune() {
 }
   const { text, author } = fortunes[index]
   return (
-  <div>
+  <div className="fortune">
     <p>
       {text}
       <br />

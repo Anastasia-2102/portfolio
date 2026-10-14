@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import '@picocss/pico/css/pico.min.css'
 import '@picocss/pico/css/pico.colors.min.css'
 import './card-variations.css'
+import './flex-container.css'
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
