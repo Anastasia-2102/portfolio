@@ -1,13 +1,8 @@
 import { useState } from 'react'
+import projects from './projects.js'
 
 function DataPlaylistPortfolioCard() {
-  const project = {
-  name: "Data Playlist",
-  description: "Songs from a chart, served by an API I deployed myself.",
-  details: "I built this project to practice working with an API and displaying song data.",
-  liveUrl: "https://anastasia-2102.github.io/data-playlist/",
-  repoUrl: "https://github.com/Anastasia-2102/data-playlist",
-  }
+  const project = projects[2]
   const [likes, setLikes] = useState(
     Number(localStorage.getItem ("data-playlist-likes"))
  )
@@ -28,23 +23,30 @@ function DataPlaylistPortfolioCard() {
   const resetLikes = () => {
   setLikes(0)
  }
-  let label = "Show More"
 
+  let text = project.description
+  let label = "Show More"
   if (open) {
+  text = `${project.description} ${project.details}`
   label = "Show Less"
- }
+}
+ 
   return (
     <article className="card-azure">
       <h2>{project.name}</h2>
-      <p>{project.description}</p>
-      {open && <p>{project.details}</p>}
+      <p>{text}</p>
+      <div className="description-control">
       <button onClick={toggleOpen}>{label}</button>
-      <p>
-        <a href={project.liveUrl}>See it live</a> · <a href={project.repoUrl}>Read the code</a>
-      </p>
-      <button onClick={addLike}>Like {likes}</button>
-      <button onClick={removeLike}>Unlike</button>
-      <button onClick={resetLikes}>Reset</button>
+      </div>
+      <div className="card-buttons">
+        <a className="project-link" href={project.liveUrl} role="button">See it live</a>
+        <a className="project-link outline" href={project.repoUrl} role="button">Read the code</a>
+      <div className="like-controls">
+      <button className="small-button" onClick={addLike}>Like {likes}</button>
+      <button className="small-button" onClick={removeLike}>Unlike</button>
+      <button className="small-button" onClick={resetLikes}>Reset</button>
+      </div>
+      </div>
     </article>
   )
 }

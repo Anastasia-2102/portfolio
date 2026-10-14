@@ -3,19 +3,23 @@ const randomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) +
 
 function Fortune() {
   const fortunes = [
-    "Keep learning something new every day.",
-    "Small steps can lead to big changes.",
-    "You are closer than you think."
+     { text: "Keep learning something new every day.", author: "Anonymous" },
+     {text: "Small steps can lead to big changes.", author: "Anonymous"},
+     {text: "You are closer than you think.", author: "Anonymous"}
   ]
 
   const [index, setIndex] = useState(0)
   const newFortune = () => {
   setIndex(randomNumber(0, fortunes.length - 1))
 }
-
+  const { text, author } = fortunes[index]
   return (
-  <div>
-    <p>{fortunes[index]}</p>
+  <div className="fortune">
+    <p>
+      {text}
+      <br />
+      <small>{author}</small>
+    </p>
     <button onClick={newFortune}>New Fortune</button>
   </div>
  )

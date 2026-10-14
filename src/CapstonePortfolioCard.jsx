@@ -1,13 +1,8 @@
 import { useState } from 'react'
+import projects from './projects.js'
 
 function CapstonePortfolioCard() {
-  const project = {
-  name: "National Parks Capstone",
-  description: "A national parks website I built to help families find parks to visit.",
-  details: "I built it in Level 2 to practice working with an API and displaying national park information.",
-  liveUrl: "https://anastasia-2102.github.io/capstone/",
-  repoUrl: "https://github.com/Anastasia-2102/capstone",
-  }
+  const project = projects[0]
   const [likes, setLikes] = useState(
    Number(localStorage.getItem("capstone-likes"))
   )
@@ -31,23 +26,29 @@ function CapstonePortfolioCard() {
   setLikes(0)
 }
 
+let text = project.description
 let label = "Show More"
 if (open) {
+  text = `${project.description} ${project.details}`
   label = "Show Less"
 }
+
   return (
     <article className="card-jade">
       <h2>{project.name}</h2>
-      <p>{project.description}</p>
-      {open && <p>{project.details}</p>}
+      <p>{text}</p>
+      <div className="description-control">
       <button onClick={toggleOpen}>{label}</button>
-      <p className="card-buttons">
-        <a href={project.liveUrl} role="button">See it live</a> 
-        <a href={project.repoUrl} role="button" className="outline">Read the code</a>
-        <button onClick={addLike}>Like {likes}</button>
-        <button onClick={removeLike}>Unlike</button>
-        <button onClick={resetLikes}>Reset</button>
-      </p>
+      </div>
+      <div className="card-buttons">
+        <a className="project-link" href={project.liveUrl} role="button">See it live</a> 
+        <a className="project-link outline" href={project.repoUrl} role="button">Read the code</a>
+        <div className="like-controls">
+          <button className="small-button" onClick={addLike}>Like {likes}</button>
+          <button className="small-button" onClick={removeLike}>Unlike</button>
+          <button className="small-button" onClick={resetLikes}>Reset</button>
+        </div>
+      </div>
       
     </article>
   )

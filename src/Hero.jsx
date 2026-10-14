@@ -1,13 +1,9 @@
 import { useState } from 'react'
 import heroPhoto from './hero-photo.js'
 import './hero.css'
+import photos from './photos.js'
 
 
-const photos = [
-  { id: "photo-1629317422263-9317e911014a", description: "MacBook Pro on a wooden table" },
-  { id: "photo-1631557777232-a2632ae3c67d", description: "Laptop and stationery on a desk" },
-  { id: "photo-1668605335560-b0786d21fd85", description: "Laptop, notebooks, and colorful markers on a desk" }
-]
 
 function Hero() {
   const [settings, setSettings] = useState({
@@ -67,16 +63,16 @@ function Hero() {
   description: description
 })
 
-const caption = "Photo " + (settings.index + 1) + " of " + photos.length + ": " + description
+const caption = `Photo ${settings.index + 1} of ${photos.length}: ${description}`
   return (
   <div>
     <div className="hero">
       
       <img src={src + "&blur=" + blur} alt={alt} />
-      <p>{caption}</p>
       <h2>Learning, building, and growing every day.</h2>
     </div>
-    <p className="hero-buttons">
+      <p>{caption}</p>
+      <p className="hero-buttons">
       <button onClick={showColor}>Color</button>
       <button onClick={showBlackAndWhite}>Black and White</button>
       <button onClick={moreBlur}>More Blur</button>

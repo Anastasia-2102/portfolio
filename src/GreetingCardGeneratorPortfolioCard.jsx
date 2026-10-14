@@ -1,13 +1,8 @@
 import { useState } from 'react'
+import projects from './projects.js'
 
 function GreetingCardGeneratorPortfolioCard() {
-  const project = {
-  name: "Greeting Card Generator",
-  description: "A project where I practiced building a greeting card generator.",
-  details: "I built this project using HTML and JavaScript to generate greeting cards with random messages and a surprise after five cards.",
-  liveUrl: "https://anastasia-2102.github.io/greeting-card-generator/",
-  repoUrl: "https://github.com/Anastasia-2102/greeting-card-generator",
-  }
+  const project = projects[3]
   const [likes, setLikes] = useState(0)
   const [open, setOpen] = useState(false)
   const addLike = () => {
@@ -24,23 +19,30 @@ function GreetingCardGeneratorPortfolioCard() {
   const resetLikes = () => {
   setLikes(0)
  }
+  
+  let text = project.description
   let label = "Show More"
-
   if (open) {
+  text = `${project.description} ${project.details}`
   label = "Show Less"
- }
+}
+ 
   return (
     <article className="card-violet">
       <h2>{project.name}</h2>
-      <p>{project.description}</p>
-      {open && <p>{project.details}</p>}
-      <button onClick={toggleOpen}>{label}</button>
-      <p>
-        <a href={project.liveUrl}>See it live</a> · <a href={project.repoUrl}>Read the code</a>
-      </p>
-      <button onClick={addLike}>Like {likes}</button>
-      <button onClick={removeLike}>Unlike</button>
-      <button onClick={resetLikes}>Reset</button>
+      <p>{text}</p>
+      <div className="description-control">
+        <button onClick={toggleOpen}>{label}</button>
+      </div>
+      <div className="card-buttons">
+        <a className="project-link" href={project.liveUrl} role="button">See it live</a>
+        <a className="project-link outline" href={project.repoUrl} role="button">Read the code</a>
+      <div className="like-controls">
+      <button className="small-button" onClick={addLike}>Like {likes}</button>
+      <button className="small-button" onClick={removeLike}>Unlike</button>
+      <button className="small-button" onClick={resetLikes}>Reset</button>
+      </div>
+      </div>
     </article>
   )
 }
