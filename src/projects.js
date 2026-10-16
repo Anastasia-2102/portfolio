@@ -5,6 +5,7 @@ const projects = [
     details: "I built it in Level 2 to practice working with an API and displaying national park information.",
     liveUrl: "https://anastasia-2102.github.io/capstone/",
     repoUrl: "https://github.com/Anastasia-2102/capstone",
+    status: "live",
   },
   {
     name: "Click Lab",
@@ -12,6 +13,7 @@ const projects = [
     details: "I built this project to practice JavaScript, event handling, and interactive game features.",
     liveUrl: "https://anastasia-2102.github.io/click-lab/",
     repoUrl: "https://github.com/Anastasia-2102/click-lab",
+    status: "live",
   },
   {
     name: "Data Playlist",
@@ -19,6 +21,7 @@ const projects = [
     details: "I built this project to practice working with an API and displaying song data.",
     liveUrl: "https://anastasia-2102.github.io/data-playlist/",
     repoUrl: "https://github.com/Anastasia-2102/data-playlist",
+    status: "live",
   },
   {
     name: "Greeting Card Generator",
@@ -26,6 +29,7 @@ const projects = [
     details: "I built this project using HTML and JavaScript to generate greeting cards with random messages and a surprise after five cards.",
     liveUrl: "https://anastasia-2102.github.io/greeting-card-generator/",
     repoUrl: "https://github.com/Anastasia-2102/greeting-card-generator",
+    status: "live",
   },
 ]
 
