@@ -44,6 +44,7 @@ if (open) {
 return (
     <article className="card-jade">
     <h2>{project.name}</h2>
+    <p>Status: {project.status}</p>
     <p>{text}</p>
 
     <div className="description-control">
