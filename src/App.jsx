@@ -7,13 +7,13 @@ import Footer from './Footer.jsx'
 import Fortune from './Fortune.jsx'
 import GitHubLink from './GitHubLink.jsx'
 import ProjectCount from './ProjectCount.jsx'
-import CapstonePortfolioCard from './CapstonePortfolioCard.jsx'
-import ClickLabPortfolioCard from './ClickLabPortfolioCard.jsx'
-import DataPlaylistPortfolioCard from './DataPlaylistPortfolioCard.jsx'
-import GreetingCardGeneratorPortfolioCard from './GreetingCardGeneratorPortfolioCard.jsx'
+
+
 import Gallery from "./Gallery.jsx"
 import ImageBuilder from './ImageBuilder.jsx'
 import Links from "./Links"
+import ProjectCard from './ProjectCard.jsx'
+import projects from './projects.js'
 import "./flex-container.css"
 
 function App() {
@@ -34,10 +34,10 @@ function App() {
         <Fortune />
       
       <div className="flex-container">
-        <CapstonePortfolioCard />
-        <ClickLabPortfolioCard />
-        <DataPlaylistPortfolioCard />
-        <GreetingCardGeneratorPortfolioCard />
+        <ProjectCard project={projects[0]} />
+        <ProjectCard project={projects[1]} />
+        <ProjectCard project={projects[2]} />
+        <ProjectCard project={projects[3]} />
       </div>
       <Gallery />
       <ImageBuilder />
