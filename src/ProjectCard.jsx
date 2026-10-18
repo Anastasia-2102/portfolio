@@ -1,6 +1,8 @@
     import { useState } from 'react'
+    import './project-card.css'
 
-function ProjectCard({ project }) {
+function ProjectCard({ project, featured }) {
+    
 const storageKey = project.name === "National Parks Capstone"
     ? "capstone-likes"
     : `${project.name.toLowerCase().replaceAll(" ", "-")}-likes`
@@ -41,8 +43,14 @@ if (open) {
     label = "Show Less"
 }
 
+let cardClass = ""
+    if (featured) {
+  cardClass = "featured"
+}
+
 return (
-    <article className="card-jade">
+
+    <article className={cardClass}>
     <h2>{project.name}</h2>
     <p>Status: {project.status}</p>
     <p>{text}</p>
