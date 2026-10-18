@@ -17,6 +17,11 @@ import projects from './projects.js'
 import "./flex-container.css"
 
 function App() {
+  const fortunes = [
+  { text: "Keep learning something new every day.", author: "Anonymous" },
+  { text: "Small steps can lead to big changes.", author: "Anonymous" },
+  { text: "You are closer than you think.", author: "Anonymous" }
+]
   return (
     <div className="container">
       <div className="intro">
@@ -31,7 +36,7 @@ function App() {
         <About />
         <Skills />
         <GitHubLink />
-        <Fortune />
+        <Fortune fortunes={fortunes}/>
       
       <div className="flex-container">
         <ProjectCard project={projects[0]} />
