@@ -10,6 +10,7 @@
 | `GitHubLink` | a link to my GitHub | `url` and `label` variables | — | - |
 | `ProjectCount` | the number of projects I have shipped | the `projects` list | — | - |
 | `ProjectCard` | one project: its name, description, details, and two links | `projects.js`, through `App` | its likes, and whether it shows more | `project` |
+| `PhotoControls` | the hero's buttons | `Hero` | - | `onNext`, `onPrevious`, `onColor`, `onBlackAndWhite` |
 
 ## What I added
 
