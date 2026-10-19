@@ -18,6 +18,8 @@ import "./flex-container.css"
 import Section from './Section.jsx'
 
 function App() {
+  const live = projects.filter((project) => project.status === "live")
+  
   const fortunes = [
   { text: "Keep learning something new every day.", author: "Anonymous" },
   { text: "Small steps can lead to big changes.", author: "Anonymous" },
@@ -41,7 +43,7 @@ function App() {
       
     <Section title="Projects">  
       <div className="flex-container">
-        {projects.map((project) => <ProjectCard key={project.name} project={project} />)}
+        {live.map((project) => <ProjectCard key={project.name} project={project} />)}
       </div>
     </Section>  
       <Gallery />
