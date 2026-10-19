@@ -1,5 +1,6 @@
     import { useState } from 'react'
     import './project-card.css'
+    import LikeButton from './LikeButton.jsx'
 
 function ProjectCard({ project, featured }) {
     
@@ -69,9 +70,7 @@ return (
         </a>
 
         <div className="like-controls">
-        <button className="small-button" onClick={addLike}>
-            Like {likes}
-        </button>
+        <LikeButton likes={likes} onLike={addLike} />
         <button className="small-button" onClick={removeLike}>
             Unlike
         </button>
