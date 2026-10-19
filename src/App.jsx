@@ -41,10 +41,7 @@ function App() {
       
     <Section title="Projects">  
       <div className="flex-container">
-        <ProjectCard project={projects[0]} featured={true}/>
-        <ProjectCard project={projects[1]} />
-        <ProjectCard project={projects[2]} />
-        <ProjectCard project={projects[3]} />
+        {projects.map((project) => <ProjectCard key={project.name} project={project} />)}
       </div>
     </Section>  
       <Gallery />
