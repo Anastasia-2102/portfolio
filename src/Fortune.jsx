@@ -1,12 +1,8 @@
 import { useState } from 'react'
 const randomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min
 
-function Fortune() {
-  const fortunes = [
-     { text: "Keep learning something new every day.", author: "Anonymous" },
-     {text: "Small steps can lead to big changes.", author: "Anonymous"},
-     {text: "You are closer than you think.", author: "Anonymous"}
-  ]
+function Fortune({fortunes}) {
+  
 
   const [index, setIndex] = useState(0)
   const newFortune = () => {

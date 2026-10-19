@@ -7,16 +7,22 @@ import Footer from './Footer.jsx'
 import Fortune from './Fortune.jsx'
 import GitHubLink from './GitHubLink.jsx'
 import ProjectCount from './ProjectCount.jsx'
-import CapstonePortfolioCard from './CapstonePortfolioCard.jsx'
-import ClickLabPortfolioCard from './ClickLabPortfolioCard.jsx'
-import DataPlaylistPortfolioCard from './DataPlaylistPortfolioCard.jsx'
-import GreetingCardGeneratorPortfolioCard from './GreetingCardGeneratorPortfolioCard.jsx'
+
+
 import Gallery from "./Gallery.jsx"
 import ImageBuilder from './ImageBuilder.jsx'
 import Links from "./Links"
+import ProjectCard from './ProjectCard.jsx'
+import projects from './projects.js'
 import "./flex-container.css"
+import Section from './Section.jsx'
 
 function App() {
+  const fortunes = [
+  { text: "Keep learning something new every day.", author: "Anonymous" },
+  { text: "Small steps can lead to big changes.", author: "Anonymous" },
+  { text: "You are closer than you think.", author: "Anonymous" }
+]
   return (
     <div className="container">
       <div className="intro">
@@ -31,14 +37,13 @@ function App() {
         <About />
         <Skills />
         <GitHubLink />
-        <Fortune />
+        <Fortune fortunes={fortunes}/>
       
+    <Section title="Projects">  
       <div className="flex-container">
-        <CapstonePortfolioCard />
-        <ClickLabPortfolioCard />
-        <DataPlaylistPortfolioCard />
-        <GreetingCardGeneratorPortfolioCard />
+        {projects.map((project) => <ProjectCard key={project.name} project={project} />)}
       </div>
+    </Section>  
       <Gallery />
       <ImageBuilder />
       <Footer />

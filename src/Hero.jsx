@@ -2,6 +2,7 @@ import { useState } from 'react'
 import heroPhoto from './hero-photo.js'
 import './hero.css'
 import photos from './photos.js'
+import PhotoControls from './PhotoControls.jsx'
 
 
 
@@ -35,6 +36,11 @@ function Hero() {
 
   const removeBlur = () => {
     setBlur(0)
+  }
+
+  const resetHero = () => {
+  setSettings({ ...settings, index: 0, sat: 0, sepia: 0 })
+  setBlur(0)
   }
 
   const nextPhoto = () => {
@@ -72,14 +78,15 @@ const caption = `Photo ${settings.index + 1} of ${photos.length}: ${description}
       <h2>Learning, building, and growing every day.</h2>
     </div>
       <p>{caption}</p>
-      <p className="hero-buttons">
-      <button onClick={showColor}>Color</button>
-      <button onClick={showBlackAndWhite}>Black and White</button>
-      <button onClick={moreBlur}>More Blur</button>
-      <button onClick={removeBlur}>No Blur</button>
-      <button onClick={previousPhoto}>Previous</button>
-      <button onClick={nextPhoto}>Next</button>
-    </p>
+    <PhotoControls
+      onNext={nextPhoto}
+      onPrevious={previousPhoto}
+      onColor={showColor}
+      onBlackAndWhite={showBlackAndWhite}
+      onReset={resetHero}
+      position={settings.index + 1}
+      total={photos.length}
+    />
     <input type="range" min="0" max="100" step="10" value={settings.sepia} onChange={readSepia} />
     <p>Sepia: {settings.sepia}</p>
     <input onChange={readNote} />
