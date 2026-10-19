@@ -15,6 +15,7 @@ import Links from "./Links"
 import ProjectCard from './ProjectCard.jsx'
 import projects from './projects.js'
 import "./flex-container.css"
+import Section from './Section.jsx'
 
 function App() {
   const fortunes = [
@@ -38,12 +39,14 @@ function App() {
         <GitHubLink />
         <Fortune fortunes={fortunes}/>
       
+    <Section title="Projects">  
       <div className="flex-container">
         <ProjectCard project={projects[0]} featured={true}/>
         <ProjectCard project={projects[1]} />
         <ProjectCard project={projects[2]} />
         <ProjectCard project={projects[3]} />
       </div>
+    </Section>  
       <Gallery />
       <ImageBuilder />
       <Footer />
