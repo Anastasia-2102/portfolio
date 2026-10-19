@@ -78,6 +78,8 @@ const caption = `Photo ${settings.index + 1} of ${photos.length}: ${description}
       onPrevious={previousPhoto}
       onColor={showColor}
       onBlackAndWhite={showBlackAndWhite}
+      position={settings.index + 1}
+      total={photos.length}
     />
     <input type="range" min="0" max="100" step="10" value={settings.sepia} onChange={readSepia} />
     <p>Sepia: {settings.sepia}</p>

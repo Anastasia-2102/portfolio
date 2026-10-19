@@ -1,12 +1,15 @@
-function PhotoControls({ onNext, onPrevious, onColor, onBlackAndWhite }) {
+function PhotoControls({ onNext, onPrevious, onColor, onBlackAndWhite, position,
+  total }) {
   return (
+  <div>
+    <p>{position} of {total}</p>
     <p className="hero-buttons">
       <button onClick={onPrevious}>Previous photo</button>
       <button onClick={onNext}>Next photo</button>
       <button onClick={onBlackAndWhite}>Black and White</button>
       <button onClick={onColor}>In color</button>
-      
     </p>
+  </div>
   )
 }
 
