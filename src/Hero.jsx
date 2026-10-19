@@ -38,6 +38,11 @@ function Hero() {
     setBlur(0)
   }
 
+  const resetHero = () => {
+  setSettings({ ...settings, index: 0, sat: 0, sepia: 0 })
+  setBlur(0)
+  }
+
   const nextPhoto = () => {
     if (settings.index === photos.length - 1) {
       setSettings({ ...settings, index: 0 })
@@ -78,6 +83,7 @@ const caption = `Photo ${settings.index + 1} of ${photos.length}: ${description}
       onPrevious={previousPhoto}
       onColor={showColor}
       onBlackAndWhite={showBlackAndWhite}
+      onReset={resetHero}
       position={settings.index + 1}
       total={photos.length}
     />

@@ -1,4 +1,4 @@
-function PhotoControls({ onNext, onPrevious, onColor, onBlackAndWhite, position,
+function PhotoControls({ onNext, onPrevious, onColor, onBlackAndWhite, onReset, position,
   total }) {
   return (
   <div>
@@ -8,6 +8,7 @@ function PhotoControls({ onNext, onPrevious, onColor, onBlackAndWhite, position,
       <button onClick={onNext}>Next photo</button>
       <button onClick={onBlackAndWhite}>Black and White</button>
       <button onClick={onColor}>In color</button>
+      <button onClick={onReset}>Reset</button>
     </p>
   </div>
   )
